@@ -1,0 +1,243 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+
+/******************************
+
+Questo è il css della pagina
+
+
+******************************/
+
+
+/*[ FONT ]*/
+
+@font-face {
+    font-family: FontAwesome;
+    src: url('../fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf');
+}
+
+@font-face {
+    font-family: Sabreshark-Two;
+    src: url('../fonts/sabreshark/sabresharktwo.ttf');
+}
+
+@font-face {
+    font-family: Sabreshark-Two;
+    src: url('../fonts/sabreshark/sabresharktwo.ttf');
+}
+
+@font-face {
+    font-family: Poppins-Regular;
+    src: url('../fonts/poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: Poppins-Medium;
+    src: url('../fonts/poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: Poppins-Bold;
+    src: url('../fonts/poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: Poppins-SemiBold;
+    src: url('../fonts/poppins/Poppins-SemiBold.ttf');
+}
+
+/*Questi sono gli aspetti generali del footer*/
+.footer 
+{
+    font-family: Poppins-Regular;
+    background-color: #101427;
+    background-size: auto;
+    background-attachment: fixed;
+    block-size: 10%;
+    margin-top: 15%;
+}
+
+.external
+{
+    overflow: auto;
+}
+
+/*il social dovrebbe andare a dx*/
+.social
+{
+    float: right;
+    padding-right: -50%;
+    width: 25%;
+    text-align: left;
+}
+
+/*Border per chi siamo + la sua posizione a sx*/
+.purpose
+{
+    padding-right: 50px;
+    border-right: solid #eee5e9;
+    border-width: 2px;
+    float: left;
+    width: 65%;
+}
+
+/*Cose per i blocchi*/
+.purpose, .social
+{
+    margin-left: 20px;
+}
+
+/*Taglia dei link per i socials*/
+.social ul li a
+{
+    font-size: 100%;
+}
+
+/*Colori dei font dei blocchi*/
+.purpose h1, .purpose p, .purpose h3, .purpose a, .social ul li a, .social #soc
+{
+    color: #eee5e9;
+    text-decoration: none;
+}
+
+/*Si sottolineano i link dei social se ci passo sopra*/
+.social ul li a:hover
+{
+    text-decoration: underline;
+}
+
+/*Lista dei socials (distanza tra un elem e un altro)*/
+.social ul li
+{
+    margin: 3px 3px 3px 3px;
+    padding: 2%;
+}
+
+/*Dimensione del testo del paragrafo di "chi siamo"*/
+#par
+{
+    font-size: 90%;
+    text-align: justify;
+}
+
+/*Chi siamo? + socials*/
+#who, #soc
+{
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+/*Join the community*/
+#join
+{
+    font-weight: bold;
+}
+
+/*Cosa succede se pass sopra le scritte principali (quelle più grandi)*/
+#who:hover, #join a:hover, #soc:hover
+{
+    color: #89c4ff;
+}
+
+#twitter::before
+/*Questo è il logo di twitter*/
+{
+    font-family: FontAwesome;
+    padding-right: 1px;
+    content: "\f099";
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: rgb(64, 210, 255);
+    font-size: 170%;
+    font-weight: 350;
+    text-decoration: none;
+}
+
+#facebook::before
+/*Questo è il logo di facebook*/
+{
+    font-family: FontAwesome;
+    padding-right: 3px;
+    content: "\f082";
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: rgb(30, 60, 192);
+    font-size: 170%;
+    font-weight: 350;
+    text-decoration: none;
+}
+
+#youtube::before
+/*Questo è il logo di youtube*/
+{
+    font-family: FontAwesome;
+    padding-right: 5px;
+    content: "\f166";
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: rgb(172, 0, 0);
+    font-size: 170%;
+    font-weight: 350;
+    text-decoration: none;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 935px)
+{
+    /*Non deve più stare accanto al chi siamo, ma sotto*/
+    .social
+    {
+            float: none;
+            width: 90%;
+    }
+
+    /*Distanza tra gli elementi della lista*/
+    .social ul li
+    {
+        padding: 1%;
+        margin: none;
+    }
+
+    /*Il border si sposta sotto, in quanto ora i social stanno sotto!*/
+    .purpose
+    {
+        width: 94%;
+        border-bottom: solid #eee5e9;
+        border-right: none;
+        border-width: 2px;
+        padding-right: 1%;
+    }
+}
+
+/*Poichè la parte del chi siamo non era molto visibile al rimpicciolirsi dello schermo,
+ho fatto del mio meglio per migliorare questo aspetto*/
+@media screen and (max-width: 634px)
+{
+    .purpose
+    {
+        width: 92%;
+    }
+}
+
+@media screen and (max-width: 362px)
+{
+    .purpose
+    {
+        width: 88%;
+    }
+}
+
+@media screen and (max-width: 295px)
+{
+    .purpose
+    {
+        width: 84%;
+    }
+}

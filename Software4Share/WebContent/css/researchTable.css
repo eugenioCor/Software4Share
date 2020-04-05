@@ -1,0 +1,235 @@
+@charset "utf-8";
+
+/* FILE CSS PER L'HOMEPAGE */
+
+/*[ FONT ]*/
+@font-face {
+	font-family: FontAwesome;
+	src: url('./fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf');
+}
+
+@font-face {
+	font-family: Sabreshark-Two;
+	src: url('../fonts/sabreshark/sabresharktwo.ttf');
+}
+
+@font-face {
+	font-family: Sabreshark-Two;
+	src: url('../fonts/sabreshark/sabresharktwo.ttf');
+}
+
+@font-face {
+	font-family: Poppins-Regular;
+	src: url('../fonts/poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+	font-family: Poppins-Medium;
+	src: url('../fonts/poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+	font-family: Poppins-Bold;
+	src: url('../fonts/poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+	font-family: Poppins-SemiBold;
+	src: url('../fonts/poppins/Poppins-SemiBold.ttf');
+}
+
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+
+/*Testo per il risultato vuoto*/
+#emptyPage {
+	font-family: Poppins;
+  	color: #234669;
+	text-align: center;
+	margin-bottom: 50%;
+}
+
+/*Tabella*/
+#tableProducts {
+  border: 1px solid #234669;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+  color: #234669;
+}
+
+/*Stile per le righe*/
+.productRow {
+  background-color: #96b9dc;
+  border: 1px solid #234669;
+  padding: .35em;
+}
+
+/*Il table data della tabella (elemento della tabella)*/
+.productSquare {
+  padding: 10px;
+  text-align: center;
+}
+
+/*Conteiner per le immagini dei prodotti*/
+.imageContainer {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+/*I nomi dei prodotti*/
+.productName {
+  text-align: center;
+  font-family: Poppins;
+  font-size: 20px;
+}
+
+/*Prezzo e compagnia bella*/
+.productPrice {
+  font-family: Poppins;
+  text-align: left;
+  padding-left: 19px;
+  float: left;
+  width: 65%;
+  border-top: 20px;
+  font-size: 20px;
+}
+
+.like
+{
+  font-family: FontAwesome;
+  content: "\f004";
+  text-align: right;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  font-size: 20px;
+  float: right;
+  width: 25%;
+  padding-right: 19px;
+}
+
+.like:hover
+{
+  color: #a3e8ff;
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 650px) {
+  
+   .productName {
+  	font-size: 15px;
+	}
+	
+	 .productPrice {
+  	font-size: 15px;
+	}
+	
+	.like {
+	font-size: 15px;
+	} 
+}
+
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+  
+   .productName {
+  	font-size: 11px;
+	}
+	
+	 .productPrice {
+  	font-size: 11px;
+	}
+	
+	.like {
+	font-size: 11px;
+	} 
+}
+
+/*Affinchè le foto non diventino abnormi*/
+img {
+  max-width:100%;
+  max-height:100%;
+}
+
+div#imageContainer {
+    padding-bottom: 8%;
+}
+
+/*Per rendere responsive la tabella*/
+
+@media screen and (max-width: 580px) {
+  #tableProducts {
+      border: 0;
+  }
+
+  .productRow {
+      border-bottom: 1px solid #234669;
+      display: block;
+      margin-bottom: 20px;
+  }
+
+  .productSquare {
+      border-bottom: 1px solid #234669;
+      display: block;
+      font-size: 13px;
+      text-align: right;
+  }
+
+  .productSquare:last-child {
+      border-bottom: 0;
+  }
+  .imageContainer {
+      position: relative;
+      left: 90%;
+      padding-left: 40px;
+  }
+
+  #marked {font-size: 26px}
+  
+   .productName {
+  	font-size: 18px;
+	}
+	
+	 .productPrice {
+  	font-size: 18px;
+	}
+	
+	.like {
+	font-size: 18px;
+	} 
+
+}
+
+.imageContainer {
+  position: relative;
+  left: 15px;
+}
+
+@media screen and (max-width: 580px) {
+  .imageContainer {
+      position: relative;
+      left: -9%;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .imageContainer {
+      position: relative;
+      left: -9%;
+  }
+}
+
+/*Roba per gli effetti alle immagini*/
+.prodIMG {
+  transition: transform .2s;
+  padding: 4%;
+}
+
+.prodIMG:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  cursor: pointer;
+}

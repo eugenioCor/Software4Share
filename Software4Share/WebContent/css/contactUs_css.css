@@ -1,0 +1,369 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+/******************************
+
+Questo è il css della pagina dell'utente
+
+
+******************************/
+
+/*[ FONT ]*/
+@font-face {
+	font-family: FontAwesome;
+	src: url('../fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf');
+}
+
+
+@font-face {
+	font-family: Sabreshark-Two;
+	src: url('../fonts/sabreshark/sabresharktwo.ttf');
+}
+
+@font-face {
+	font-family: Sabreshark-Two;
+	src: url('../fonts/sabreshark/sabresharktwo.ttf');
+}
+
+@font-face {
+	font-family: Poppins-Regular;
+	src: url('../fonts/poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+	font-family: Poppins-Medium;
+	src: url('../fonts/poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+	font-family: Poppins-Bold;
+	src: url('../fonts/poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+	font-family: Poppins-SemiBold;
+	src: url('../fonts/poppins/Poppins-SemiBold.ttf');
+}
+
+body {font-family: Poppins;margin: 0; }
+
+#megaContainer {
+    background: #EDF3F9 url(../images/matrix2.png);
+    background-repeat-y: no-repeat;
+}
+
+.cont {
+    
+    padding: 2% 25% 2% 25%;
+}
+h1#greetings {
+    margin: 0;
+    border: 1px solid #234669;
+    border-radius: 50px;
+    background: #96b9dc;
+}
+p.paragraph {
+    font-family: poppins-bold;
+}
+
+#formContainer {
+	width: 90%;
+    margin: auto;
+    background: #96b9dc;
+    border: 1px solid  #234669;
+    border-radius: 15px;
+    padding: 1% 3% 2% 3%;
+    color: #234669;
+    resize: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#greetings {
+	font-family: Poppins-Bold;
+	color:  #234669;
+	margin: auto;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	text-align: center;
+}
+
+#inputContainer {
+	float: left;
+	width: 50%;
+}
+
+#inputContainer .paragraph {
+	padding: 0;
+	margin-bottom: -0.5%;
+	margin-top: -1.5%;
+	padding-bottom: 2%;
+}
+
+#selectorContainer {
+	float: right;
+}
+
+#textArea {
+	text-align: center;
+
+}
+
+#textMessage {
+	margin-top: 3%;
+	width: 100%;
+	background: #234669;
+	border: 1px solid #234669;
+	border-radius: 15px;
+	padding: 1% 3% 1% 3%;
+	color: #96b9dc;
+	resize: none;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+#send {
+	width: 15%;
+}
+
+#buttonContainer {
+	text-align: center;
+}
+
+#objectSelector::-ms-expand {
+    display: none;
+}
+
+/*
+* Stile per la select delle categorie
+*/
+#selectorContainer {
+    position: relative;
+    display: flex;
+    width: 34%;
+    height: 30px;
+    line-height: 3;
+    background: #234669;
+    overflow: hidden;
+    border-radius: 7px;
+}
+
+#objectSelector {
+    flex: 1;
+    padding-left: 3%;
+    color: #96b9dc;
+    cursor: pointer;
+    position: absolute;
+    padding: 1% 38% 2%;
+    background-color: #234669;
+}
+
+#selectorContainer {
+	float: right;
+	 margin-top: 1%;
+}
+
+
+/* Serve per la freccia */
+
+#selectorContainer::after {
+    font-family: fontAwesome;
+    content: "\f063";
+    position: absolute;
+    top: -20px;
+    right: -2px;
+    padding: 1.5% 6%;
+    background: #2b5886;
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+}
+
+#selectorContainer:hover::after {
+    transform: rotate(20deg);
+    /* Safari and Chrome */
+    -webkit-transform: rotate(20deg);
+    /* Opera */
+    -o-transform: rotate(20deg);
+    /* Firefox */
+    -moz-transform: rotate(20deg);
+    /* IE 9 */
+    -ms-transform: rotate(20deg);
+}
+
+#selectorContainer:hover::after {
+    color: #96b9dc;
+}
+
+#email {
+    width: 55%;
+    height: 27px;
+    border: solid 1px #eee5e9;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #000000;
+    font-weight: 300;
+}
+
+textarea::-webkit-input-placeholder {
+    color: #96B9DC;
+}
+
+textarea:-moz-placeholder {
+    color: #96B9DC;
+}
+
+textarea::-moz-placeholder {
+    color: #96B9DC;
+}
+
+textarea:-ms-input-placeholder {
+    color: #96B9DC;
+}
+
+#send {
+    background-color: #234669;
+    width: 30%;
+    height: 40px;
+    color: white;
+    font-size: 18px;
+    border-radius: 26px;
+    cursor: pointer;
+    text-align: center;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+#send:hover {
+    background-color: #57b846;
+}
+
+@media (max-width: 1350px) {
+	#email {
+		 width: 63%;
+	}
+}
+
+@media (max-width: 1210px) {
+	#email {
+		 width: 69%;
+	}
+}
+
+@media (max-width: 1200px) {
+
+	#objectSelector {
+    	padding: 2% 34% 2%;
+	}
+
+	#selectorContainer {
+		width: 36%;
+	}
+}
+
+@media (max-width: 1100px) {
+	#email {
+		 width: 74%;
+	}
+}
+
+@media (max-width:990px) {
+	#email {
+		 width:80%;
+	}
+}
+
+@media (max-width: 940px) {
+	#email {
+		 width:84%;
+	}
+}
+
+@media (max-width: 870px) {
+	#email {
+		 width:90%;
+	}
+}
+
+@media (max-width: 810px) {
+	#email {
+		 width:96%;
+	}
+}
+
+@media (max-width: 780px) {
+	#objectSelector {
+    padding: 3% 30% 3%;
+	}
+
+	#selectorContainer {
+		width: 39%;
+	}
+}
+
+@media (max-width: 730px) {
+	#inputContainer {
+		font-size: 90%
+	}
+}
+
+@media (max-width: 700px) {
+	#email {
+		 width: 100%;
+	}
+} 
+
+@media (max-width: 600px) {
+
+	.paragraph {
+		text-align: center;
+	}
+
+	#objectSelector {
+   		padding: 3% 27% 3%;
+    	float:none;
+	}
+
+	#selectorContainer {
+		width: 45%;
+		text-align: center;
+		float:none
+		margin: auto;
+		margin-top: 3%;
+		margin-right: 27%;
+	}
+	
+	#inputContainer {
+		float:none;
+		text-align: center;
+		margin: auto;
+	}
+
+	#send {
+		 width: 45%;
+	}
+}
+
+@media (max-width: 470px) {
+	#objectSelector {
+    padding: 3% 19% 5%;
+	}
+
+	#selectorContainer {
+		width: 45%;
+	}
+}
+
+@media (max-width: 400px) {
+
+	#selectorContainer {
+		width: 55%;
+		margin-right:22%
+	}
+}

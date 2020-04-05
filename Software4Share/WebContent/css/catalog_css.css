@@ -1,0 +1,390 @@
+@charset "utf-8";
+
+/* FILE CSS PER IL CATALOGO */
+
+/*[ FONT ]*/
+@font-face {
+	font-family: FontAwesome;
+	src: url('./fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf');
+}
+
+@font-face {
+	font-family: Sabreshark-Two;
+	src: url('../fonts/sabreshark/sabresharktwo.ttf');
+}
+
+@font-face {
+	font-family: Sabreshark-Two;
+	src: url('../fonts/sabreshark/sabresharktwo.ttf');
+}
+
+@font-face {
+	font-family: Poppins-Regular;
+	src: url('../fonts/poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+	font-family: Poppins-Medium;
+	src: url('../fonts/poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+	font-family: Poppins-Bold;
+	src: url('../fonts/poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+	font-family: Poppins-SemiBold;
+	src: url('../fonts/poppins/Poppins-SemiBold.ttf');
+}
+
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+
+/*
+* Il nome: 'a-z' inizialmente, poi diventa il nome della categoria
+*/
+#markedContainer
+{
+	float: left;
+}
+
+#marked {
+	font-family: Poppins;
+  	color: #234669;
+	text-align: left;
+	margin-left: 3%;
+}
+
+
+.but {
+    height: 55px;
+    background-color: #4080bf;
+    border-radius: 6px;
+    font-family: Poppins-Regular;
+    font-size: 18px;
+    color: #fff;
+    width: 65%;
+    border-radius: 39px;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    margin-top: 1%;
+    cursor: pointer;
+    margin-bottom: 1%;
+}
+
+.but:hover {
+    background-color: #323f7c;
+}
+
+span.fa-heart::before {
+    font-family: fontAwesome;
+    content: "\f004";
+}
+
+#categorySelector::-ms-expand {
+    display: none;
+}
+
+/*
+* Stile per la select delle categorie
+*/
+.categorySelectorContainer {
+    position: relative;
+    display: flex;
+    width: 34%;
+    height: 30px;
+    line-height: 3;
+    background: #234669;
+    overflow: hidden;
+    border-radius: 7px;
+}
+
+#categorySelector {
+    flex: 1;
+    padding-left: 3%;
+    color: #96b9dc;
+    cursor: pointer;
+    position: absolute;
+    padding: 1% 38%;
+    background-color: #234669;
+}
+
+.categorySelectorContainer {
+	float: right;
+	 margin-top: 10px;
+	 margin-right: 3%;
+}
+
+
+/* Serve per la freccia */
+
+.categorySelectorContainer::after {
+    font-family: fontAwesome;
+    content: "\f063";
+    position: absolute;
+    top: -17px;
+    right: -2px;
+    padding: 1.5% 6%;
+    background: #2b5886;
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+}
+
+.categorySelectorContainer:hover::after {
+    transform: rotate(20deg);
+    /* Safari and Chrome */
+    -webkit-transform: rotate(20deg);
+    /* Opera */
+    -o-transform: rotate(20deg);
+    /* Firefox */
+    -moz-transform: rotate(20deg);
+    /* IE 9 */
+    -ms-transform: rotate(20deg);
+}
+
+.categorySelectorContainer:hover::after {
+    color: #96b9dc;
+}
+
+#categoryButton {
+	float: right;
+}
+
+/*
+* Per rendere responsive la select e il nome in evidenza
+*/
+
+@media (max-width: 1450px) {
+
+	#categorySelector {
+	    padding-left: 1%;
+	    padding: 1% 37%;
+	}
+
+	.categorySelectorContainer {
+		width: 36%
+	}
+}
+
+
+@media (max-width: 1350px) {
+
+	#categorySelector {
+	    padding-left: 1%;
+	    padding: 2% 37%;
+	}
+
+	.categorySelectorContainer {
+		width: 36%
+	}
+
+	.categorySelectorContainer::after {
+    padding: 2% 6%;
+	}
+}
+
+@media (max-width: 1000px) {
+
+	#categorySelector {
+	    padding-left: 1%;
+	    padding: 2% 34%;
+	}
+
+	.categorySelectorContainer {
+		width: 36%
+	}
+
+	.categorySelectorContainer::after {
+    padding: 3% 6%;
+	}
+}
+
+
+@media (max-width: 930px) {
+
+	#categorySelector {
+	    padding-left: 1%;
+	    padding: 2% 32%;
+	}
+
+	.categorySelectorContainer {
+		width: 36%
+	}
+}
+
+@media (max-width: 850px) {
+
+	#categorySelector {
+	    padding-left: 1%;
+	    padding: 3% 29%;
+	}
+
+	.categorySelectorContainer {
+		width: 39%
+	}
+}
+
+@media (max-width: 760px) {
+
+	#categorySelector {
+	    padding-left: 1%;
+	    padding: 3% 30%;
+	}
+
+	.categorySelectorContainer {
+		width: 41%
+	}
+}
+
+@media (max-width: 600px) {
+
+	#categorySelector {
+	    padding-left: 1%;
+	    padding: 3% 30%;
+	}
+
+	#marked {
+		text-align: center;
+		margin-top: -15%;
+	}
+	
+		.categorySelectorContainer {
+		width: 49%;
+		text-align: center;
+		margin: auto;
+		float: none;
+		margin-top: 11%;
+	}
+	
+	#tableProducts {
+		margin-top: 12% !important;
+	}
+}
+
+@media (max-width: 470px) {
+
+	#marked {
+		margin-top: -16%;
+	}
+	
+		.categorySelectorContainer {
+		margin-top: 13%;
+	}
+	
+	#tableProducts {
+		margin-top: 14% !important;
+	}
+}
+
+@media (max-width: 425px) {
+	
+	#marked {
+		margin-top: -19%;
+	}
+	
+		.categorySelectorContainer {
+		margin-top: 13%;
+	}
+	
+	#tableProducts {
+		margin-top: 14% !important;
+	}
+}
+
+@media (max-width: 370px) {
+	
+	#marked {
+		margin-top: -22%;
+	}
+	
+		.categorySelectorContainer {
+		margin-top: 16%;
+	}
+	
+	#tableProducts {
+		margin-top: 17% !important;
+	}
+}
+
+@media (max-width: 315px) {
+	
+	#marked {
+		margin-top: -25%;
+	}
+	
+		.categorySelectorContainer {
+		margin-top: 18%;
+	}
+	
+	#tableProducts {
+		margin-top: 19% !important;
+	}
+}
+
+@media (max-width: 285px) {
+	
+	#marked {
+		margin-top: -27%;
+	}
+	
+		.categorySelectorContainer {
+		margin-top: 20%;
+	}
+	
+	#tableProducts {
+		margin-top: 20% !important;
+	}
+}
+
+
+@media (max-width: 500px) {
+
+	#categorySelector {
+	    padding-left: 1%;
+	    padding: 3% 25%;
+	}
+
+	.categorySelectorContainer {
+		width: 50%
+	}
+}
+
+@media (max-width: 450px) {
+
+	#categorySelector {
+	    padding: 3% 29%;
+	}
+
+	.categorySelectorContainer {
+		width: 57%;
+	}
+}
+
+@media (max-width: 390px) {
+
+	#categorySelector {
+	    padding: 3% 23%;
+	}
+
+	.categorySelectorContainer::after {
+    padding: 4% 6%;
+	}
+}
+
+@media (max-width: 335px) {
+
+	#categorySelector {
+	    padding: 4% 19%;
+	}
+
+	.categorySelectorContainer::after {
+    padding: 5% 6%;
+	}
+}
+

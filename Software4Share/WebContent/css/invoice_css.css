@@ -1,0 +1,264 @@
+@charset "utf-8";
+
+/* FILE CSS PER L'INVOICE*/
+
+/*[ FONT ]*/
+@font-face {
+	font-family: FontAwesome;
+	src: url('./fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf');
+}
+
+@font-face {
+	font-family: Sabreshark-Two;
+	src: url('../fonts/sabreshark/sabresharktwo.ttf');
+}
+
+@font-face {
+	font-family: Sabreshark-Two;
+	src: url('../fonts/sabreshark/sabresharktwo.ttf');
+}
+
+@font-face {
+	font-family: Poppins-Regular;
+	src: url('../fonts/poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+	font-family: Poppins-Medium;
+	src: url('../fonts/poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+	font-family: Poppins-Bold;
+	src: url('../fonts/poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+	font-family: Poppins-SemiBold;
+	src: url('../fonts/poppins/Poppins-SemiBold.ttf');
+}
+
+body { margin: 0; background: #EDF3F9 url(../images/matrix2.png);
+    background-repeat-y: no-repeat; }
+
+input[type="date"]::-webkit-clear-button {
+    display: none;
+}
+
+
+/* Serve a rimuovere i bottoni su e giu della data  */
+
+input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+
+
+input[type="date"] {
+    position: relative;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: transparent;
+    background: none;
+    z-index: 1;
+}
+
+input[type="date"]:before {
+    color: transparent;
+    background: none;
+    display: block;
+    font-family: 'FontAwesome';
+    content: '\f073';
+    width: 15px;
+    height: 20px;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    color: #96B9DC;
+    cursor: pointer;
+}
+
+input[type="date"]:hover:before {
+    color: #4080BF;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#titleInv h1 {
+	text-align: center;
+    padding: 20px;
+    padding-top: 30px;
+    font-size: 36px;
+    color: white;
+    font-weight: 700;
+    font-family: Poppins-Regular;
+    margin: 0;
+}
+
+#titleInv {
+	width: 100%;
+    height: 100px;
+    background: #234669;
+}
+
+#choiceContainer {
+	text-align: center;
+    width: 35%;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background: #96b9dc;
+    border: 1px solid #234669;
+    border-radius: 30px;
+    padding: 0% 1% 1% 1%;
+    color: #234669;
+    resize: none;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: Poppins-Regular;
+}
+
+.textInput, .fromDate, .toDate {
+	width: 200px;
+    height: 27px;
+    border: solid 1px #eee5e9;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #000000;
+    font-weight: 300;
+}
+
+#invoicesTable, #invoicesTableSELL, #invoicesTableBUY {
+	margin: auto;
+	text-align: center;
+	border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.tableContainer, #noInv, #noSell {
+	width: 90%;
+    margin: auto;
+    background: #96b9dc;
+    border: 1px solid #234669;
+    border-radius: 30px;
+    padding: 2% 3% 2% 3%;
+    color: #234669;
+    resize: none;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: Poppins-Regular;
+}
+
+.tableContainer {
+	margin-top: 2%;
+}
+
+#noInv, #noSell {
+	text-align: center;
+    font-family: Poppins-Bold;
+    width: 30%;
+    padding-top: 2%;
+}
+
+li {
+	list-style: none;
+}
+
+input.singleButton {
+    width: 70%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+/*tabella resp*/
+td.dataInv {
+    padding: 1%;
+    margin: 3%;
+    overflow: auto;
+}
+
+td {
+    font-size: 14px;
+}
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+tr {
+    background-color: #96b9dc;
+    /* border: 1px solid #234669; */
+    padding: .35em;
+}
+
+
+
+
+
+  
+ td, th {
+  padding: 1em .5em;
+  vertical-align: middle;
+}
+  
+td.dataInvProd {
+    display: inline-flex;
+    overflow: auto;
+}
+   
+   @media all and (max-width: 600px) 
+   {
+   	#choiceContainer {
+   
+    padding: 0% 5% 1% 5%;
+   
+}
+
+   }
+  @media all and (max-width: 510px) 
+   {
+   	#choiceContainer {
+   
+    padding: 0% 20% 1% 14%;
+   
+}
+
+   }
+ 
+ @media all and (max-width: 768px) {
+    
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  
+  th {
+    text-align: left;
+  }
+
+  
+  thead {
+    float: left;
+    white-space: nowrap;
+  }
+  
+  tbody {
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    white-space: nowrap;
+  }
+  
+  tr {
+    display: inline-block;
+    vertical-align: top;
+  }
+ 
+  th.info {
+    padding-bottom: 39%;
+}
+  }
+  
+ 

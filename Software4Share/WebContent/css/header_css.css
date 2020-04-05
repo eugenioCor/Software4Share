@@ -1,0 +1,198 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+/******************************
+
+Questo è il css della pagina
+
+
+******************************/
+
+/*[ FONT ]*/
+@font-face {
+	font-family: FontAwesome;
+	src: url('../fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf');
+}
+
+
+@font-face {
+	font-family: Sabreshark-Two;
+	src: url('../fonts/sabreshark/sabresharktwo.ttf');
+}
+
+@font-face {
+	font-family: Sabreshark-Two;
+	src: url('../fonts/sabreshark/sabresharktwo.ttf');
+}
+
+@font-face {
+	font-family: Poppins-Regular;
+	src: url('../fonts/poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+	font-family: Poppins-Medium;
+	src: url('../fonts/poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+	font-family: Poppins-Bold;
+	src: url('../fonts/poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+	font-family: Poppins-SemiBold;
+	src: url('../fonts/poppins/Poppins-SemiBold.ttf');
+}
+
+.header {
+	background-image: url("../images/images1.png");
+	background-position: left top;
+	background-color: #161d3a;
+	background-size: auto;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	
+}
+
+.header.scrolled {
+	box-shadow: 0% 31.25% 93.75% rgba(0, 0, 0, 0.08);
+}
+
+.menu_nav {
+	border-bottom: solid #eee5e9;
+	border-width: 12.5%;
+}
+
+.menu_nav, .sub_menu /*Aspetti legati alle due navigation bar*/ {
+	display: flex;
+	/* serve per considerare la clase come un blocco disposto*/
+	justify-content: left;
+	/* serve ad allineare al centro tutti gli elementi della login li mette da sx a dx  */
+	align-items: left;
+	/* serve  ad allignare al centro dall altro verso il basso */
+	font-family: Poppins-Regular;
+}
+
+.sub_menu #menu_search_form
+	/*La seconda parte dell'header (parte di ricerca) inline*/ {
+	display: inline;
+	margin-right: 20px;
+}
+
+.menu_nav ul li, .sub_menu ul li
+	/*La seconda e prima parte dell'header inline (una sopra e una sotto)*/
+	{
+	display: inline;
+	margin-right: 20px;
+}
+
+.sub_menu ul li a
+	/*Decorazioni per le singole ancore della lista della seconda parte dell'header*/
+	{
+	font-size: 140%;
+	color: #eee5e9;
+	font-weight: 450;
+	text-decoration: none;
+}
+
+.menu_nav ul li a
+	/*Decorazioni per le singole ancore della lista della prima parte dell'header*/
+	{
+	font-size: 145%;
+	color: #eee5e9;
+	font-weight: 450;
+	text-decoration: none;
+}
+
+
+.user::before /*Questo è l'omino bellino*/ {
+	font-family: FontAwesome;
+	font-size: 130%;
+	padding-right: 5px;
+	content: "\f007";
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	font-size: 145%;
+	color: #eee5e9;
+	font-weight: 450;
+	text-decoration: none;
+}
+
+.cart::before /*Questo è il carrellino bellino*/ {
+	font-family: FontAwesome;
+	font-size: 130%;
+	padding-right: 5px;
+	content: "\f07a";
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	font-size: 145%;
+	color: #eee5e9;
+	font-weight: 450;
+	text-decoration: none;
+}
+
+.menu_nav ul li.active a, .sub_menu ul li.active a {
+	color: #234669;
+}
+
+.menu_nav ul li a:hover, .sub_menu ul li a:hover
+	/*Quando passo sugli elementi della lista cambiano colore*/ {
+	text-decoration: underline;
+}
+
+.menu_nav #img_logo /* "LOGO" del sito, ha un font diverso! */ {
+	font-family: Sabreshark-Two;
+	color: #eee5e9;
+	font-size: 310%;
+	text-decoration: none;
+}
+
+.menu_nav #logo
+	/*Nome del sito affianco al logo, essa è più grande e con colori diversi*/
+	{
+	font-weight: 700;
+	font-family: Poppins-Bold;
+	color: #eee5e9;
+	text-decoration: none;
+	font-size: 230%;
+}
+
+.search_input /*Barra di ricerca*/ {
+	width: 200px;
+	height: 27px;
+	border: solid 1px #eee5e9;
+	border-radius: 20px;
+	text-align: center;
+	font-size: 14px;
+	color:	#000000;
+	font-weight: 300;
+}
+
+.search_input:focus, .search_input:hover
+	/*Anche sulla barra di ricerca cambiano i colori se ci passo sopra o ci sono dentro*/
+	{
+	border-color: #FFFF60;
+	color:	#000000;
+}
+
+.menu_search_button
+	/* Ho messo il bottoncino-lente all'interno del text-field */ {
+	background-color: transparent;
+	border: none;
+	color: #234669;
+	font-size: 18px;
+	cursor: pointer;
+	margin-left: -35px;
+}
+button.menu_search_button::before {
+    font-family: FontAwesome;
+    content: "\f002";
+}
+/* Non sapevo che colore mettere come hover, il giallo non ci stava bene, F*/
+.menu_search_button:hover {
+	color: #000000;
+}

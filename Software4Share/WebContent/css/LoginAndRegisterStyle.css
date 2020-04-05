@@ -1,0 +1,1092 @@
+/*font ausiliari*/
+
+@font-face {
+    font-family: Poppins-Regular;
+    src: url('../fonts/poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: Poppins-Medium;
+    src: url('../fonts/poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: Poppins-Bold;
+    src: url('../fonts/poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: Poppins-SemiBold;
+    src: url('../fonts/poppins/Poppins-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: Poppins-Regular;
+    src: url('../fonts/poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: Poppins-Medium;
+    src: url('../fonts/poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: Poppins-Bold;
+    src: url('../fonts/poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: Poppins-SemiBold;
+    src: url('../fonts/poppins/Poppins-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf');
+}
+
+
+/**
+  css per il restyle se dovesse mancare il css vengono usati questi di base  
+*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: Poppins-Regular, sans-serif;
+}
+
+
+/*modifica stile dei link*/
+
+a {
+    font-family: Poppins-Regular;
+    font-size: 14px;
+    color: #96B9DC;
+    transition: all 0.4s;
+    text-decoration: none;
+    display: block;
+}
+
+a:hover {
+    color: #4080BF;
+}
+
+
+/*Stili per paragrafi intestazioni e liste*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0px;
+}
+
+p {
+    font-family: Poppins-Regular;
+    font-size: 14px;
+    color: #96B9DC;
+    margin: 0px;
+}
+
+ul,
+li {
+    margin: 0px;
+}
+
+
+/*---------------------------------------------*/
+
+input {
+    outline: none;
+    /* toglie la linea sopra quando clicchi*/
+    border: none;
+    /* toglie il bordo visibile degli input style material design*/
+}
+
+
+/* Serve a rimuovere il bottone per cancellare la data */
+
+input[type="date"]::-webkit-clear-button {
+    display: none;
+}
+
+
+/* Serve a rimuovere i bottoni su e giu della data  */
+
+input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+input[type="date"]::-webkit-datetime-edit {
+    color: #96B9DC;
+    padding-right: 60px;
+}
+
+input[type="date"] {
+    position: relative;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: transparent;
+    background: none;
+    z-index: 1;
+}
+
+input[type="date"]:before {
+    color: transparent;
+    background: none;
+    display: block;
+    font-family: 'FontAwesome';
+    content: '\f073';
+    width: 15px;
+    height: 20px;
+    position: absolute;
+    top: 12px;
+    right: 6px;
+    color: #96B9DC;
+}
+
+input[type="date"]:hover:before {
+    color: #4080BF;
+    font-size: 18px;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    /*serve a far assomigliare un campo numerico come un aria di testo*/
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+textarea {
+    outline: none;
+    border: none;
+}
+
+textarea:focus,
+input:focus {
+    border-color: transparent;
+}
+
+
+/* i vari webkit ed ms servono per far funzionare la colorazione del placeholder su browser diversi*/
+
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+input:focus:-moz-placeholder {
+    color: transparent;
+}
+
+input:focus::-moz-placeholder {
+    color: transparent;
+}
+
+input:focus:-ms-input-placeholder {
+    color: transparent;
+}
+
+textarea:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+textarea:focus:-moz-placeholder {
+    color: transparent;
+}
+
+textarea:focus::-moz-placeholder {
+    color: transparent;
+}
+
+textarea:focus:-ms-input-placeholder {
+    color: transparent;
+}
+
+input::-webkit-input-placeholder {
+    color: #96B9DC;
+}
+
+input:-moz-placeholder {
+    color: #96B9DC;
+}
+
+input::-moz-placeholder {
+    color: #96B9DC;
+}
+
+input:-ms-input-placeholder {
+    color: #96B9DC;
+}
+
+textarea::-webkit-input-placeholder {
+    color: #96B9DC;
+}
+
+textarea:-moz-placeholder {
+    color: #96B9DC;
+}
+
+textarea::-moz-placeholder {
+    color: #96B9DC;
+}
+
+textarea:-ms-input-placeholder {
+    color: #96B9DC;
+}
+
+label {
+    display: block;
+    margin: 0;
+}
+
+
+/* serve a dare lo stile al bottone */
+
+button {
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+/* style login */
+
+.limiter {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container-login100 {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    /* serve per considerare la clase come un blocco disposto*/
+    justify-content: center;
+    /* serve ad allineare al centro tutti gli elementi della login li mette da sx a dx  */
+    align-items: center;
+    /* serve  ad allignare al centro dall altro verso il basso */
+    padding: 15px;
+
+	background: #EDF3F9 url("../images/matrix2.png");
+    background-repeat-y: no-repeat;
+}
+
+.wrap-login100 {
+    /* serve ad ingrandire il box della login  e dargli uno stile*/
+    width: 650px;
+    /* allarga il box */
+    background: white;
+    /* setta il background del box sotto l'immagine */
+    border-radius: 60px;
+    /* serve a stondare i bordi del box */
+    overflow: hidden;
+    /* serve a trattenere gli elementi nel box */
+    position: relative;
+}
+
+
+/*stile titolo del form*/
+
+.login100-form-title-image {
+    background-image: url(../images/images.jpg);
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    /* serve a definire il livello di posizione in questo caso l'imagine si trova dietro */
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    /* serve per non far ripetere l'imagine del titolo*/
+    background-size: cover;
+    background-position: center;
+    /* serve per mantere centrata l'imagine in modo che la scritta login sia sempre centrata*/
+    padding: 50px 15px 74px 15px;
+}
+
+.login100-form-title-text {
+    font-family: Poppins-Bold;
+    font-size: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.login100-form-title-image::before {
+    /*Serve a definire un qualcosa che viene prima di questa classe lo usiamo per inserire un layer prima dell'imagine (sovrapponiamo il colore sull' imagine)*/
+    content: "";
+    /*Indichiamo che non deve esserci nessun contenuto prima di questo blocco */
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #234669bb;
+    /*colore da sovrapporre all'imagine */
+}
+
+
+/*style form*/
+
+.login100-form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 70px 50px 100px;
+}
+
+
+/*stile input*/
+
+.wrap-input100 {
+    position: relative;
+    border-bottom: 1px solid #96B9DC;
+    padding-top: 15px;
+}
+
+.wrapLogin {
+    width: 100%;
+}
+
+.label-input100 {
+    /* serve per la scritta prima del campo di input*/
+    font-family: Poppins-Regular;
+    font-size: 17px;
+    color: #4080bf;
+    line-height: 1.2;
+    text-align: right;
+}
+
+.label-icon-user::before {
+    /*Serve ad inserire l'icona vicino al testo username*/
+    font-family: FontAwesome;
+    content: "\f007";
+    font-size: 17px;
+    color: #4080bf;
+    line-height: 1.2;
+    text-align: right;
+    padding-right: 1%;
+}
+
+.label-icon-write::before {
+    /*Serve ad inserire l'icona vicino al testo username*/
+    font-family: FontAwesome;
+    content: "\f044";
+    font-size: 17px;
+    color: #4080bf;
+    line-height: 1.2;
+    text-align: right;
+    padding-right: 1%;
+}
+
+.label-icon-iva::before {
+    /*Serve ad inserire l'icona vicino al testo username*/
+    font-family: FontAwesome;
+    content: "\f153";
+    font-size: 17px;
+    color: #4080bf;
+    line-height: 1.2;
+    text-align: right;
+    padding-right: 1%;
+}
+
+.label-icon-email::before {
+    /*Serve ad inserire l'icona vicino al testo username*/
+    font-family: FontAwesome;
+    content: "\f0e0";
+    font-size: 17px;
+    color: #4080bf;
+    line-height: 1.2;
+    text-align: right;
+    padding-right: 1%;
+}
+
+.label-icon-pass-lock::before {
+    /*Serve ad inserire l'icona vicino al testo username*/
+    font-family: FontAwesome;
+    content: "\f023";
+    font-size: 17px;
+    color: #4080bf;
+    line-height: 1.2;
+    text-align: right;
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+.label-icon-date::before {
+    /*Serve ad inserire l'icona vicino al testo username*/
+    font-family: FontAwesome;
+    content: "\f073";
+    font-size: 17px;
+    color: #4080bf;
+    line-height: 1.2;
+    text-align: right;
+    padding-right: 4px;
+}
+
+.label-icon-pass-unlock::before {
+    /*Serve ad inserire l'icona vicino al testo username*/
+    font-family: FontAwesome;
+    content: "\f13e";
+    font-size: 17px;
+    color: #4080bf;
+    line-height: 1.2;
+    text-align: right;
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+.label-icon-pass-lock:hover::before {
+    /*Serve ad inserire l'icona vicino al testo username*/
+    font-family: FontAwesome;
+    content: "\f023";
+    font-size: 23px;
+    color: #1988f8;
+    line-height: 1.2;
+    text-align: right;
+    padding-right: 4px;
+}
+
+.label-icon-pass-unlock:hover::before {
+    /*Serve ad inserire l'icona vicino al testo username*/
+    font-family: FontAwesome;
+    content: "\f13e";
+    font-size: 23px;
+    color: #1988f8;
+    line-height: 1.2;
+    text-align: right;
+    padding-right: 4px;
+}
+
+.inputStyle {
+    /* serve per lo stile del campo di testo*/
+    font-family: Poppins-Regular;
+    font-size: 15px;
+    line-height: 1.2;
+    display: block;
+    width: 100%;
+    color: #96B9DC;
+    background: transparent;
+    padding: 0 5px;
+}
+
+.focus-input100 {
+    /* serve a impostare cosa fare quando clicchiamo sul campo di testo*/
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    /*indica che la freccetta non deve far nulla in questo modo possiamo selezionare il campo di testo */
+}
+
+.focus-input100::before {
+    /*Serve per fare la transizione della liea che cambia dal blu ad un altro colore definito sotto*/
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    -webkit-transition: all 0.6s;
+    /*comandi per la transizione della linea sottostante*/
+    -o-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    transition: all 0.6s;
+    background: #57b846;
+}
+
+input.inputStyle {
+    /*serve a definire l'altezza delle aree di input*/
+    height: 40px;
+}
+
+.inputStyle:focus+.focus-input100::before {
+    width: 100%;
+}
+
+.has-val.input100+.focus-input100::before {
+    width: 100%;
+}
+
+.inputTodate::after {
+    font-family: FontAwesome;
+    content: "\f073";
+    font-size: 14px;
+    color: #4080bf;
+    padding-left: 200px;
+}
+
+
+/*stile link*/
+
+.container-links {
+    /*serve per regolare lo spazio superiore ed inferiore del blocco div dove si trovano sia la check che password dimenticata */
+    padding-top: 10px;
+}
+
+
+/*stile bottone */
+
+.container-login100-form-btn {
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 10% 10% 0% 10%;
+}
+
+.login100-form-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 100%;
+    height: 50px;
+    background-color: #57b846;
+    border-radius: 25px;
+    font-family: Poppins-Regular;
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.2;
+    text-align: center;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.login100-form-btn:hover {
+    background-color: #4080bf;
+}
+
+
+/*Parte per rendere il sito responsive */
+
+@media (max-width: 610px) {
+    .wrap-input100 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .wrap-input100 {
+        width: 100%;
+    }
+    .login100-form {
+        padding: 15px 50px 117px;
+    }
+}
+
+@media (max-width: 480px) {
+    .wrap-input100 {
+        width: 100%;
+    }
+    .login100-form {
+        padding: 15px 50px 15px;
+    }
+    .label-input100 {
+        text-align: left;
+        position: unset;
+        top: unset;
+        left: unset;
+        width: 100%;
+        padding: 0 5px;
+    }
+    .login100-form-title-text {
+        font-size: 30px
+    }
+}
+
+
+/*Serve per dare uno stile agli avvertimenti di errore la classe alert- validate viene inserita e rimossa dallo script */
+
+.validate-input {
+    position: relative;
+}
+
+.alert-validate::before {
+    /*usato per mostrare il messaggio di errore */
+    content: attr(data-validate);
+    /*aggiunge il messaggio che sta scritto nell'attributo data-validate */
+    position: absolute;
+    overflow: visible;
+    max-width: 92%;
+    background-color: #fff;
+    border: 1px solid #c80000;
+    border-radius: 15px;
+    padding: 4px 25px 4px 15px;
+    top: 70%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 2px;
+    pointer-events: none;
+    font-family: Poppins-Medium;
+    color: #c80000;
+    font-size: 13px;
+    line-height: 1.4;
+    text-align: left;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 0.4s;
+    -o-transition: opacity 0.4s;
+    -moz-transition: opacity 0.4s;
+    transition: opacity 0.4s;
+}
+
+.alert-validate::after {
+    /*usato per mostrare il simbolo di errore*/
+    content: "\f188";
+    font-family: FontAwesome;
+    display: block;
+    position: absolute;
+    color: #c80000;
+    font-size: 15px;
+    top: 70%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 8px;
+}
+
+.lockImage {
+    padding-right: 0%;
+    display: inline-flex;
+}
+
+.alert-validate:hover:before {
+    visibility: visible;
+    opacity: 1;
+}
+
+.alert-validate-date::before {
+    /*usato per mostrare il messaggio di errore */
+    content: attr(data-validate);
+    /*aggiunge il messaggio che sta scritto nell'attributo data-validate */
+    position: absolute;
+    overflow: visible;
+    max-width: 92%;
+    background-color: #fff;
+    border: 1px solid #c80000;
+    border-radius: 15px;
+    padding: 4px 25px 4px 15px;
+    top: 75%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 23px;
+    pointer-events: none;
+    font-family: Poppins-Medium;
+    color: #c80000;
+    font-size: 13px;
+    line-height: 1.4;
+    text-align: left;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 0.4s;
+    -o-transition: opacity 0.4s;
+    -moz-transition: opacity 0.4s;
+    transition: opacity 0.4s;
+}
+
+.alert-validate-date::after {
+    /*usato per mostrare il simbolo di errore*/
+    content: "\f188";
+    font-family: FontAwesome;
+    display: block;
+    position: absolute;
+    color: #c80000;
+    font-size: 15px;
+    top: 75%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 31px;
+}
+
+.alert-validate-date:hover:before {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*serve per rendere invisibile il testo dell'errore fino a 200 px e il testo */
+
+@media (max-width: 200px) {
+    .alert-validate::before {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@media (max-width: 320px) {
+    .alert-validate::before {
+        /*usato per mostrare il messaggio di errore */
+        content: attr(data-validate);
+        /*aggiunge il messaggio che sta scritto nell'attributo data-validate */
+        position: absolute;
+        overflow: visible;
+        max-width: 70%;
+        background-color: #fff;
+        border: 1px solid #c80000;
+        border-radius: 15px;
+        padding: 4px 25px 4px 15px;
+        top: 70%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        right: 2px;
+        pointer-events: none;
+        font-family: Poppins-Medium;
+        color: #c80000;
+        font-size: 9px;
+        line-height: 1.4;
+        text-align: left;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: opacity 0.4s;
+        -o-transition: opacity 0.4s;
+        -moz-transition: opacity 0.4s;
+        transition: opacity 0.4s;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+
+table th,
+table td {
+    padding: 10px;
+}
+
+@media screen and (max-width: 800px) {
+    table {
+        border: 0;
+    }
+    table tr {
+        display: block;
+        margin-bottom: 20px;
+    }
+    table td {
+        display: block;
+        font-size: 13px;
+    }
+    table td:last-child {
+        border-bottom: 0;
+    }
+}
+
+.input-checkbox100 {
+    display: none;
+}
+
+.label-checkbox100 {
+    font-family: Poppins-Regular;
+    font-size: 15px;
+    color: #96B9DC;
+    line-height: 1.4;
+    display: block;
+    position: relative;
+    padding-left: 26px;
+    cursor: pointer;
+    padding-top: 10%;
+}
+
+.label-checkbox100::before {
+    content: "\f00c";
+    font-family: FontAwesome;
+    font-size: 13px;
+    color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 2px;
+    background: #fff;
+    border: 1px solid #1988f8;
+    left: 0;
+    top: 33%;
+}
+
+.input-checkbox100:checked+.label-checkbox100::before {
+    color: #1988f8;
+}
+
+.txt {
+    text-transform: capitalize;
+}
+
+.blockPage,
+.passPage {
+    padding: 3% 5% 8% 5%;
+    border: 2px #4080bf solid;
+    background-color: #96b9dc8f;
+    position: relative;
+    width: inherit;
+    border-radius: 40px;
+}
+
+.blockPage_txt_body,
+.blockPage_txt_header,
+.passPage_txt_body,
+.passPage_txt_header {
+    color: #4080bf;
+}
+
+.blockPage_txt_header,
+.passPage_txt_header {
+    font-family: Poppins-Regular;
+    font-size: 22px;
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+.blockPage_txt_header::after {
+    content: "\f023";
+    font-family: FontAwesome;
+    font-size: 19px;
+    padding-left: 1%;
+}
+
+.label-input100-unlock,
+.label-input100-passPage {
+    font-family: Poppins-Regular;
+    font-size: 19px;
+    color: #4080bf;
+    line-height: 1.2;
+    display: block;
+}
+
+.label-input100-newPass {
+    font-family: Poppins-Regular;
+    font-size: 19px;
+    color: #4080bf;
+    line-height: 1.2;
+    display: inline;
+    padding-right: 14px;
+    -ms-user-select: none;
+    /* IE 10+ */
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.label-input100-unlock::before {
+    content: "\f084";
+    font-family: FontAwesome;
+    font-size: 19px;
+    padding-right: 1%;
+}
+
+.label-input100-passPage::before {
+    content: "\f0e0";
+    font-family: FontAwesome;
+    font-size: 19px;
+    padding-right: 1%;
+}
+
+.input100-unlock,
+.input100-unlock_2 {
+    font-family: Poppins-Regular;
+    font-size: 18px;
+    text-align: center;
+    color: #214eb7;
+    line-height: 1.2;
+    width: 72%;
+    background: transparent;
+    padding: 13px 3px 6px;
+    border-bottom: 1px solid #4080bf;
+}
+
+.input100-unlock:focus,
+.input100-passPage:focus,
+.input100-unlock_2:focus {
+    -webkit-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    transition: all 0.6s;
+    border-bottom: 1px solid #57b846;
+}
+
+.wrap-input100-unlock,
+.wrap-input100-passPage {
+    position: relative;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.login100-form-btn-unlock {
+    padding: 0 8px;
+    height: 33px;
+    background-color: #4080bf;
+    border-radius: 6px;
+    font-family: Poppins-Regular;
+    font-size: 18px;
+    color: #fff;
+    width: 75%;
+    border-radius: 39px;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    margin-top: 5%;
+    cursor: pointer;
+}
+
+.login100-form-btn-unlock:hover {
+    background-color: #57b846;
+}
+
+@media screen and (max-width: 635px) {
+    .login100-form-btn-unlock {
+        margin-top: 4%;
+        width: 74%;
+        border-radius: 39px;
+    }
+    .input100-unlock,
+    .input100-unlock_2 {
+        width: 74%;
+        font-size: 17px;
+    }
+    .wrap-input100-unlock,
+    .wrap-input100-passPage {
+        text-align-last: center;
+        align-content: center;
+        text-align: -webkit-center;
+    }
+    .label-input100-unlock,
+    .label-input100-passPage {
+        font-size: 19px;
+    }
+}
+
+@media screen and (max-width: 363px) {
+    .login100-form-btn-unlock {
+        margin-top: 6%;
+        margin-bottom: 6%;
+        width: 74%;
+        border-radius: 39px;
+    }
+    .input100-unlock,
+    .input100-unlock_2 {
+        width: 74%;
+        font-size: 15px;
+    }
+    .label-input100-unlock,
+    .label-input100-passPage {
+        font-size: 17px;
+    }
+    .blockPage_txt_header,
+    .passPage_txt_header {
+        font-size: 18px;
+        padding-top: 15px;
+    }
+    .blockPage_txt_header::after {
+        font-size: 15px;
+    }
+}
+
+.alert-validate-block::after,
+.alert-validate-block_2::after {
+    content: "\f188";
+    font-family: FontAwesome;
+    display: block;
+    position: absolute;
+    color: #c80000;
+    font-size: 15px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 14%;
+}
+
+.alert-validate-block_2::after {
+    top: 85%;
+}
+
+.alert-validate-block::before,
+.alert-validate-block_2::before {
+    content: attr(data-validate);
+    position: absolute;
+    overflow: visible;
+    max-width: 92%;
+    background-color: #fff;
+    border: 1px solid #c80000;
+    border-radius: 15px;
+    padding: 4px 25px 4px 15px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 12%;
+    pointer-events: none;
+    font-family: Poppins-Medium;
+    color: #c80000;
+    font-size: 13px;
+    line-height: 1.4;
+    text-align: left;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 0.4s;
+    -o-transition: opacity 0.4s;
+    -moz-transition: opacity 0.4s;
+    transition: opacity 0.4s;
+}
+
+.alert-validate-block_2::before {
+    top: 85%;
+}
+
+.alert-validate-block:hover:before,
+.alert-validate-block_2:hover:before {
+    visibility: visible;
+    opacity: 1;
+}
